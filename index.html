@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaos Simulator · 混沌模拟器 — Six societal disruptions, simulated</title>
+
+<meta name="description" content="Chaos Simulator runs six extreme societal disruptions — internet shutdown, AI takeover, global blackout, currency collapse, infinite abundance, memory deletion — through three social configurations and returns honest reactions.">
+<meta name="keywords" content="societal collapse, disruption, AI takeover, civilization, simulation, 混沌, 模拟">
+<meta name="author" content="Gewenbo">
+<link rel="canonical" href="https://chaos-simulator.psyverse.fun/">
+<link rel="alternate" hreflang="en" href="https://chaos-simulator.psyverse.fun/">
+<link rel="alternate" hreflang="zh-CN" href="https://chaos-simulator.psyverse.fun/">
+<link rel="alternate" hreflang="x-default" href="https://chaos-simulator.psyverse.fun/">
+<meta property="og:title" content="Chaos Simulator — Six societal disruptions, simulated">
+<meta property="og:description" content="Six disruptions × three societies = eighteen futures.">
+<meta property="og:url" content="https://chaos-simulator.psyverse.fun/">
+<meta property="og:site_name" content="Psyverse">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chaos Simulator">
+<meta name="twitter:description" content="Six societal disruptions, simulated.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ff6f3c">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%2314131e'/><path d='M16 4 L20 14 L30 14 L22 20 L25 30 L16 24 L7 30 L10 20 L2 14 L12 14 Z' fill='%23ff6f3c'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">
+        <span lang="en">Chaos Simulator</span>
+        <span lang="zh">混沌模拟器</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#scenarios"><span lang="en">Scenarios</span><span lang="zh">情境</span></a>
+      <a href="#sim"><span lang="en">Simulator</span><span lang="zh">模拟器</span></a>
+      <a href="#read"><span lang="en">Reader</span><span lang="zh">读取</span></a>
+    </div>
+    <div class="nav-ctrl">
+      <button class="btn" id="lang-btn">EN</button>
+      <button class="btn" id="theme-btn">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span lang="en">Six Disruptions · Three Societies · Eighteen Futures</span><span lang="zh">六种破坏 · 三种社会 · 十八种未来</span></div>
+      <h1 class="display">
+        <span lang="en">When the substrate <em>cracks,</em> what does the body politic actually do?</span>
+        <span lang="zh">当底层<em>开裂</em>，社会身体究竟会做什么？</span>
+      </h1>
+      <p class="lede">
+        <span lang="en">Most chaos fiction tells you what will happen. Chaos Simulator tells you what most people will actually do — usually less heroic, often less terrible, almost always different from what the genre predicts. Six disruptions, three social configurations, eighteen honest readings.</span>
+        <span lang="zh">大多数混沌虚构告诉你将发生什么。混沌模拟器告诉你多数人实际会做什么——通常没那么英雄、常常没那么糟，几乎总与类型预测不同。六种破坏，三种社会配置，十八份诚实读数。</span>
+      </p>
+      <div class="tags">
+        <span class="tag">six disruptions</span>
+        <span class="tag">three societies</span>
+        <span class="tag">honest reactions</span>
+        <span class="tag">EN · 中文</span>
+      </div>
+    </div>
+    <div class="chaos-viz" id="chaos-viz"></div>
+  </div>
+</header>
+
+<section id="scenarios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">C1 · Six Disruptions</div>
+      <h2><span lang="en">Six scenarios. <em>Each one breaks something different.</em></span><span lang="zh">六种情境。<em>每一种破坏的东西都不同。</em></span></h2>
+      <p class="sec-lede"><span lang="en">A real disruption is named by what it removes. The genre tends to amplify drama; honest simulation tracks the boring middle, where most adults eventually live.</span><span lang="zh">真实破坏由它移除的东西来命名。类型往往放大戏剧性；诚实的模拟追踪无聊的中段——多数成年人最终居住的地方。</span></p>
+    </div>
+    <div class="grid c3" id="scen-grid"></div>
+  </div>
+</section>
+
+<section id="sim">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">C2 · The Simulator</div>
+      <h2><span lang="en">Pick a disruption. Pick a society. <em>Run the year.</em></span><span lang="zh">挑一种破坏。挑一种社会。<em>跑过这一年。</em></span></h2>
+      <p class="sec-lede"><span lang="en">6 disruptions × 3 social configurations = 18 templated futures. The output is a year-long arc, not a doomsday vignette. Honesty: this is templated, not a frontier model.</span><span lang="zh">6 种破坏 × 3 种社会配置 = 18 种模板化未来。输出是一段一年长的弧线，不是世界末日小品。坦诚：这是模板化的，不是前沿模型。</span></p>
+    </div>
+    <div class="sim-box">
+      <div class="controls">
+        <div>
+          <label><span lang="en">Disruption</span><span lang="zh">破坏</span></label>
+          <select id="d-id">
+            <option value="internet">Internet shutdown · 互联网关闭</option>
+            <option value="ai" selected>AI takeover · AI 接管</option>
+            <option value="blackout">Global blackout · 全球停电</option>
+            <option value="money">Currency collapse · 货币崩溃</option>
+            <option value="abundance">Infinite abundance · 无限丰盛</option>
+            <option value="memory">Memory deletion · 记忆删除</option>
+          </select>
+        </div>
+        <div>
+          <label><span lang="en">Society</span><span lang="zh">社会</span></label>
+          <select id="d-soc">
+            <option value="liberal" selected>High-trust liberal democracy</option>
+            <option value="authoritarian">High-capacity authoritarian state</option>
+            <option value="weak">Weak-state federation</option>
+          </select>
+        </div>
+      </div>
+      <button class="go" id="sim-go"><span lang="en">Run year</span><span lang="zh">运行一年</span></button>
+      <div class="sim-out" id="sim-out"></div>
+    </div>
+  </div>
+</section>
+
+<section id="read">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">C3 · Chaos Reader</div>
+      <h2><span lang="en">Five canned probes plus a free-text fallback.</span><span lang="zh">五个预设探针 + 自由文本回退。</span></h2>
+    </div>
+    <div class="mirror-wrap">
+      <div class="prompt-grid" id="prompt-grid"></div>
+      <div class="mirror-input">
+        <textarea id="mirror-input" placeholder="e.g. 'What happens to friendships if money disappears?'"></textarea>
+        <button id="mirror-go"><span lang="en">Read</span><span lang="zh">读取</span></button>
+      </div>
+      <div class="mirror-out" id="mirror-out"></div>
+    </div>
+  </div>
+</section>
+
+<section id="rails">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">C4 · Guardrails</div>
+      <h2><span lang="en">What this simulator refuses to pretend.</span><span lang="zh">本模拟器拒绝伪装的事。</span></h2>
+    </div>
+    <div class="rails">
+      <h3><span lang="en">Five things Chaos Simulator will not do.</span><span lang="zh">混沌模拟器不会做的五件事。</span></h3>
+      <ul>
+        <li><span lang="en"><strong>No collapse pornography.</strong> Most disruptions are not heroic. They are eighteen months of administrative tedium punctuated by short crises. We will not simulate a more dramatic version because the genre rewards drama.</span><span lang="zh"><strong>不做崩溃色情。</strong>多数破坏都不英雄。它们是十八个月的行政沉闷，间杂短暂危机。我们不会因为类型奖励戏剧性而模拟更戏剧化的版本。</span></li>
+        <li><span lang="en"><strong>No prepper fantasy.</strong> The simulator does not produce "what to stockpile" guides; in most disruptions, individual stockpiling is statistically irrelevant compared to local network configuration.</span><span lang="zh"><strong>不做末日囤积者幻想。</strong>模拟器不产出"该囤什么"指南；在多数破坏中，与本地网络配置相比，个人囤积在统计上无关紧要。</span></li>
+        <li><span lang="en"><strong>No utopian abundance.</strong> Infinite abundance is included specifically to refuse the easy version: most adults under abundance do not become better, more creative, or more generous. They become bored. We will not pretend otherwise.</span><span lang="zh"><strong>不做乌托邦丰盛。</strong>"无限丰盛"被特意纳入以拒绝其简单版本：丰盛之下，多数成年人不会变得更好、更有创造力或更慷慨。他们会变得无聊。我们不假装相反。</span></li>
+        <li><span lang="en"><strong>No real-event prediction.</strong> The simulator works on stylised disruptions. It is not a forecasting tool, not an investment thesis, and not a guide to actual events; people who use it as one will lose money or time.</span><span lang="zh"><strong>不做真实事件预测。</strong>模拟器在风格化破坏之上工作。它不是预测工具、不是投资论题、不是真实事件指南；把它当作上述之一使用的人会损失金钱或时间。</span></li>
+        <li><span lang="en"><strong>No infinite-AI-generation slop.</strong> Eighteen templated futures + five canned probes + one heuristic fallback is better discipline than infinite plausible-sounding LLM scenario writing.</span><span lang="zh"><strong>不做无限 AI 生成的污水。</strong>18 种模板化未来 + 5 个预设探针 + 1 个启发式回退，比无穷个貌似合理的 LLM 情境写作是更好的纪律。</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <span lang="en">Chaos Simulator · part of the </span>
+    <span lang="zh">混沌模拟器 · </span>
+    <a href="https://psyverse.fun">Psyverse</a>
+    <span lang="en"> portfolio by </span>
+    <span lang="zh"> 投资组合的一部分 · 作者：</span>
+    <a href="https://psyverse.fun">Gewenbo</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
